@@ -1,204 +1,175 @@
-<!doctype html>
-<html lang="ar">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>تحميل VIP — تطبيق أنس | Anas VIP Download</title>
-  <meta name="description" content="Download the official VIP build of Anas app. Fast, responsive, bilingual landing page optimized for mobile and desktop.">
-  <meta name="theme-color" content="#0b6efd">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>تحميل تطبيق ANAS GDXJ</title>
+  <meta name="description" content="صفحة تحميل رسمية لتطبيق ANAS GDXJ — تنزيل APK مباشر ومتوافق مع جميع الأجهزة." />
+  <meta name="theme-color" content="#0b6efd"/>
   <style>
-    /* Reset & base */
-    :root{--bg:#f6f8fb;--card:#ffffff;--accent:#0b6efd;--muted:#6b7280;--radius:14px}
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:#4facfe; --muted:#94a3b8; --radius:14px;
+    }
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{margin:0;font-family:Inter, Tahoma, Arial, sans-serif;background:linear-gradient(180deg,#f7f9ff 0%,var(--bg) 100%);color:#111;direction:rtl}
-    .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px}
-    .panel{width:100%;max-width:1100px;background:var(--card);border-radius:var(--radius);box-shadow:0 12px 40px rgba(12,20,60,0.08);display:flex;gap:24px;overflow:hidden}
-
-    /* left: content */
-    .left{flex:1;padding:36px}
-    .brand{display:flex;align-items:center;gap:14px}
-    .logo{width:68px;height:68px;border-radius:14px;background:linear-gradient(135deg,#0ea5e9,#7c3aed);display:inline-block}
-    h1{margin:0;font-size:20px}
-    p.lead{margin:10px 0 18px;color:var(--muted)}
-    .meta{font-size:13px;color:var(--muted);margin-bottom:18px}
-
-    /* download area */
-    .download-card{background:#f8fbff;border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:12px}
-    .btn{background:var(--accent);color:#fff;padding:12px 16px;border-radius:10px;text-decoration:none;font-weight:700;display:inline-flex;align-items:center;gap:10px;border:none;cursor:pointer}
-    .btn.secondary{background:#eef2ff;color:var(--accent);font-weight:600}
-    .info{font-size:13px;color:var(--muted)}
-
-    /* right: sidebar */
-    .right{width:320px;background:linear-gradient(180deg,#fbfdff,#ffffff);padding:28px;border-left:1px solid rgba(12,20,60,0.03)}
-    .card-title{font-weight:700;margin:0 0 10px}
-    ul{padding-left:18px;margin:8px 0;color:var(--muted)}
-    li{margin:8px 0}
-
-    /* language toggle */
-    .lang{display:flex;gap:8px;margin-left:auto}
-    .lang button{border-radius:8px;padding:6px 10px;border:1px solid rgba(15,23,42,0.06);background:transparent;cursor:pointer}
-    .lang .active{background:var(--accent);color:#fff;border-color:transparent}
-
-    /* responsive */
-    @media (max-width:880px){
-      .panel{flex-direction:column}
-      .right{width:100%;border-left:none;border-top:1px solid rgba(12,20,60,0.03)}
+    body{
+      margin:0;font-family:system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg,#071126 0%,var(--bg) 100%);color:#fff;
+      padding:28px;display:flex;align-items:center;justify-content:center;
     }
-
-    /* small helpers */
-    .muted{color:var(--muted)}
-    .center{display:flex;align-items:center;gap:8px}
+    .container{
+      width:100%;max-width:980px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);box-shadow:0 12px 48px rgba(2,6,23,0.7);overflow:hidden;display:flex;gap:20px;
+    }
+    .main{flex:1;padding:28px}
+    .sidebar{width:320px;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border-left:1px solid rgba(255,255,255,0.03)}
+    .brand{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,#00f2fe,#4facfe)}
+    h1{margin:0;font-size:20px}
+    .subtitle{color:var(--muted);margin-top:6px;margin-bottom:18px;font-size:14px}
+    .lead{color:var(--muted);line-height:1.6;margin-bottom:18px}
+    .download-card{background:var(--card);padding:18px;border-radius:12px;display:flex;flex-direction:column;gap:12px}
+    .meta-row{display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .btn-download{
+      appearance:none;border:0;padding:12px 18px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#0ea5e9);
+      color:#04263b;font-weight:800;cursor:pointer;font-size:15px;box-shadow:0 12px 30px rgba(79,172,254,0.18)
+    }
+    .btn-download:active{transform:translateY(1px)}
+    .muted{color:var(--muted);font-size:13px}
+    .info-list{margin:12px 0;padding-left:16px;color:var(--muted);font-size:14px}
+    .lang-toggle{display:flex;gap:8px;margin-left:auto}
+    .lang-toggle button{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);padding:6px 10px;border-radius:8px;cursor:pointer}
+    .lang-toggle .active{background:var(--accent);color:#04263b;border-color:transparent}
+    footer{margin-top:12px;color:var(--muted);font-size:13px}
+    @media (max-width:900px){.container{flex-direction:column}.sidebar{width:100%;border-left:none;border-top:1px solid rgba(255,255,255,0.03)}}
+    a.download-link{color:inherit;text-decoration:none;display:inline-block}
+    .kbd{background:rgba(255,255,255,0.04);padding:6px 8px;border-radius:6px;font-weight:600;color:#fff;font-size:13px}
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="panel" role="main">
-      <div class="left">
-        <div class="brand">
-          <div class="logo" aria-hidden></div>
-          <div style="flex:1">
-            <div style="display:flex;align-items:center">
-              <h1 id="title">منطقة تحميل VIP — تطبيق أنس</h1>
-              <div class="lang" style="margin-inline-start:12px">
-                <button id="btnAr" class="active">العربية</button>
-                <button id="btnEn">English</button>
-              </div>
+  <div class="container" role="main" aria-labelledby="pageTitle">
+    <div class="main">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div style="flex:1">
+          <div style="display:flex;align-items:center">
+            <h1 id="pageTitle">تحميل تطبيق ANAS GDXJ</h1>
+            <div class="lang-toggle" style="margin-inline-start:12px">
+              <button id="btnAr" class="active" aria-pressed="true">العربية</button>
+              <button id="btnEn" aria-pressed="false">English</button>
             </div>
-            <div class="meta" id="subtitle">نسخة رسمية مخصصة لمستخدمي VIP — حجم الملف: ~15MB</div>
           </div>
+          <div class="subtitle" id="subtitle">النسخة الرسمية — تنزيل مباشر لملف APK</div>
         </div>
-
-        <p class="lead" id="lead">تحميل آمن ومباشر لتطبيق أنس. هذه الصفحة متوافقة مع جميع الأجهزة — الهواتف، الأجهزة اللوحية، وسطح المكتب. اضغط زر التحميل للحصول على الملف.</p>
-
-        <div class="download-card">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <div>
-              <div style="font-weight:700" id="releaseLabel">الإصدار 1.10.0</div>
-              <div class="muted" id="releaseDate">منشور: 2026-10-07</div>
-            </div>
-            <div class="center">
-              <button id="downloadBtn" class="btn">تحميل APK</button>
-            </div>
-          </div>
-
-          <div class="info" id="installHints">
-            <strong>تعليمات التثبيت (Android):</strong>
-            <ol>
-              <li>افتح الإعدادات → الأمان → فعّل التثبيت من مصادر غير معروفة للمتصفح أو مدير الملفات.</li>
-              <li>بعد تنزيل الملف، افتحه واتبع خطوات التثبيت.</li>
-              <li>لأمان إضافي، تحقق من توقيع التطبيق في إعدادات النظام أو عبر أدوات التحقق.</li>
-            </ol>
-          </div>
-
-          <div class="info muted">ملاحظة: الرابط يؤدي إلى ملف الإصدار مرفوع على صفحة Releases في GitHub. إذا أردت حماية إضافية (روابط مؤقتة)، يمكنني إعدادها لاحقًا عبر خدمة سحابية.</div>
-        </div>
-
       </div>
 
-      <aside class="right" aria-label="معلومات">
-        <h3 class="card-title" id="rightTitle">معلومات سريعة / Quick facts</h3>
-        <p class="muted" id="rightText">تحميل مباشر من مصدر رسمي. لا نستخدم تسجيل دخول في هذه النسخة — الرابط عام ومباشر.</p>
+      <p class="lead" id="leadText">اضغط على زر "تحميل APK" لتنزيل النسخة الرسمية. متوافق مع الهواتف والأجهزة اللوحية وسطح المكتب.</p>
 
-        <ul>
-          <li id="liSize">حجم تقريبى: <strong>15 MB</strong></li>
-          <li id="liPlatform">المنصة: Android (APK)</li>
-          <li id="liSecurity">التحقق: أنصح باستخدام Play Protect أو التحقق اليدوي</li>
-        </ul>
+      <div class="download-card" aria-live="polite">
+        <div class="meta-row">
+          <div>
+            <div style="font-weight:800" id="release">إصدار 1.10.0</div>
+            <div class="muted" id="published">منشور: 2026-10-07</div>
+          </div>
+          <div>
+            <a id="dlLink" class="download-link" href="https://github.com/Featuredapps/anas_gdxj.apk/releases/download/anasgdxj/anas_gdxj.apk" target="_blank" rel="noopener noreferrer">
+              <button class="btn-download" id="downloadBtn" aria-label="Download ANAS GDXJ APK">تحميل APK</button>
+            </a>
+          </div>
+        </div>
 
-        <hr>
-        <p style="font-weight:700;margin-bottom:8px">Contact / تواصل</p>
-        <p class="muted">Email: support@featuredapps.example</p>
-      </aside>
+        <div class="muted">
+          <strong>تعليمات سريعة:</strong>
+          <ol style="margin:8px 0 0 18px;">
+            <li>على أجهزة Android: قد تحتاج تفعيل "تثبيت من مصادر غير معروفة" للمتصفح.</li>
+            <li>بعد التنزيل، افتح الملف لتثبيت التطبيق.</li>
+            <li>إذا أردت تأكيد سلامة الملف، يمكنك طلب قيمة SHA256 (مكان مخصص أدناه).</li>
+          </ol>
+        </div>
+
+        <div class="muted" aria-hidden="false" id="fileMeta">
+          الحجم التقريبي: <span id="fileSize">15 MB</span> — التحقق (SHA256): <span id="sha256">غير متوفر</span>
+        </div>
+
+        <div style="margin-top:6px" class="muted">ملاحظة: هذا التنزيل مباشر من GitHub Releases. الرابط عام ويمكن مشاركته.</div>
+      </div>
+
+      <footer>
+        <div class="muted">حقوق © FeaturedApps — ANAS GDXJ — الإصدار 1.10.0</div>
+      </footer>
     </div>
+
+    <aside class="sidebar" aria-label="معلومات إضافية">
+      <h3 style="margin-top:0">معلومات/Quick info</h3>
+      <p class="muted" id="sideText">تحميل مباشر وسهل. إذا أردت حماية أقوى (روابط مؤقتة أو تسجيل دخول) يمكنني إعداد حل سحابي لاحقًا.</p>
+
+      <ul class="info-list" aria-hidden="true">
+        <li>المنصة: Android (APK)</li>
+        <li id="liSize">الحجم: ~15 MB</li>
+        <li>المصدر: GitHub Releases</li>
+      </ul>
+
+      <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:12px 0" />
+
+      <p class="muted"><strong>تواصل</strong></p>
+      <p class="muted">Email: <span class="kbd">support@featuredapps.example</span></p>
+    </aside>
   </div>
 
   <script>
-    // Release APK URL (public release asset)
-    const APK_URL = 'https://github.com/Featuredapps/anas_gdxj.apk/releases/download/anasgdxj/anas_gdxj.apk';
-
-    // Basic metadata (adjust if you want to show real file size)
-    const RELEASE_VERSION = '1.10.0';
-    const RELEASE_DATE = '2026-10-07';
-    const FILE_SIZE = '15 MB';
-
-    // Elements
-    const btnAr = document.getElementById('btnAr');
-    const btnEn = document.getElementById('btnEn');
-    const title = document.getElementById('title');
-    const subtitle = document.getElementById('subtitle');
-    const lead = document.getElementById('lead');
-    const releaseLabel = document.getElementById('releaseLabel');
-    const releaseDate = document.getElementById('releaseDate');
-    const liSize = document.getElementById('liSize');
-    const rightText = document.getElementById('rightText');
-    const downloadBtn = document.getElementById('downloadBtn');
-
-    // i18n strings
-    const T = {
+    const i18n = {
       ar: {
-        title: 'منطقة تحميل VIP — تطبيق أنس',
-        subtitle: 'نسخة رسمية مخصصة لمستخدمي VIP — متوافقة مع كل الأجهزة',
-        lead: 'تحميل آمن ومباشر لتطبيق أنس. هذه الصفحة متوافقة مع جميع الأجهزة — الهواتف، الأجهزة اللوحية، وسطح المكتب. اضغط زر التحميل للحصول على الملف.',
-        releaseLabel: 'الإصدار ' + RELEASE_VERSION,
-        releaseDate: 'منشور: ' + RELEASE_DATE,
-        fileSize: 'حجم تقريبى: ' + FILE_SIZE,
-        rightText: 'تحميل مباشر من مصدر رسمي. لا نستخدم تسجيل دخول في هذه النسخة — الرابط عام ومباشر.',
-        downloadText: 'تحميل APK',
-        contact: 'بريد الدعم: support@featuredapps.example'
+        title: 'تحميل تطبيق ANAS GDXJ',
+        subtitle: 'النسخة الرسمية — تنزيل مباشر لملف APK',
+        lead: 'اضغط على زر "تحميل APK" لتنزيل النسخة الرسمية. متوافق مع الهواتف والأجهزة اللوحية وسطح المكتب.',
+        release: 'إصدار 1.10.0',
+        published: 'منشور: 2026-10-07',
+        download: 'تحميل APK',
+        sideText: 'تحميل مباشر وسهل. إذا أردت حماية أقوى (روابط مؤقتة أو تسجيل دخول) يمكنني إعداد حل سحابي لاحقًا.',
+        fileSizeText: 'الحجم: ~15 MB'
       },
       en: {
-        title: 'Anas VIP Download',
-        subtitle: 'Official VIP build — works on all devices',
-        lead: 'Secure direct download of the Anas app. This landing page is mobile-friendly and works across phones, tablets and desktops. Tap the button to download.',
-        releaseLabel: 'Release ' + RELEASE_VERSION,
-        releaseDate: 'Published: ' + RELEASE_DATE,
-        fileSize: 'Approx. size: ' + FILE_SIZE,
-        rightText: 'Direct download from an official source. No login is required in this version — link is public.',
-        downloadText: 'Download APK',
-        contact: 'Support email: support@featuredapps.example'
+        title: 'ANAS GDXJ — Download',
+        subtitle: 'Official build — direct APK download',
+        lead: 'Tap the "Download APK" button to get the official build. Mobile-friendly across phones, tablets and desktops.',
+        release: 'Release 1.10.0',
+        published: 'Published: 2026-10-07',
+        download: 'Download APK',
+        sideText: 'Direct and easy download. If you want stronger protection (temporary links or login) I can add a cloud solution later.',
+        fileSizeText: 'Size: ~15 MB'
       }
     };
 
-    function setLang(lang){
-      const s = T[lang];
-      title.textContent = s.title;
-      subtitle.textContent = s.subtitle;
-      lead.textContent = s.lead;
-      releaseLabel.textContent = s.releaseLabel;
-      releaseDate.textContent = s.releaseDate;
-      liSize.textContent = s.fileSize;
-      rightText.textContent = s.rightText;
-      downloadBtn.textContent = s.downloadText;
+    const btnAr = document.getElementById('btnAr'), btnEn = document.getElementById('btnEn');
+    const setText = (lang) => {
+      const t = i18n[lang];
+      document.getElementById('pageTitle').textContent = t.title;
+      document.getElementById('subtitle').textContent = t.subtitle;
+      document.getElementById('leadText').textContent = t.lead;
+      document.getElementById('release').textContent = t.release;
+      document.getElementById('published').textContent = t.published;
+      document.getElementById('downloadBtn').textContent = t.download;
+      document.getElementById('sideText').textContent = t.sideText;
+      document.getElementById('liSize').textContent = t.fileSizeText;
       document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+      if(lang === 'ar'){ btnAr.classList.add('active'); btnEn.classList.remove('active'); btnAr.setAttribute('aria-pressed','true'); btnEn.setAttribute('aria-pressed','false'); }
+      else { btnEn.classList.add('active'); btnAr.classList.remove('active'); btnEn.setAttribute('aria-pressed','true'); btnAr.setAttribute('aria-pressed','false'); }
+    };
 
-      // active styles
-      if(lang === 'ar'){
-        btnAr.classList.add('active'); btnEn.classList.remove('active');
-      }else{
-        btnEn.classList.add('active'); btnAr.classList.remove('active');
-      }
-    }
+    btnAr.addEventListener('click', () => setText('ar'));
+    btnEn.addEventListener('click', () => setText('en'));
+    setText('ar');
 
-    btnAr.addEventListener('click', () => setLang('ar'));
-    btnEn.addEventListener('click', () => setLang('en'));
-    setLang('ar');
+    (function populateMeta(){
+      const fileSize = '15 MB';
+      const sha256 = 'غير متوفر';
+      document.getElementById('fileSize').textContent = fileSize;
+      document.getElementById('sha256').textContent = sha256;
+    })();
 
-    // Download handler: open in new tab to ensure download in mobile browsers
-    downloadBtn.addEventListener('click', (e) => {
-      // small analytics counter in localStorage
-      try{
-        const k = 'anas_download_count';
-        const n = parseInt(localStorage.getItem(k) || '0', 10) + 1;
-        localStorage.setItem(k, n);
-      }catch(err){/* ignore */}
-
-      // open the release asset
-      window.open(APK_URL, '_blank');
+    document.getElementById('dlLink').addEventListener('click', () => {
+      try { localStorage.setItem('anas_last_download', new Date().toISOString()); } catch (_) {}
     });
-
-    // Progressive enhancement: if direct link is blocked, show info
-    // (No server-side protection as requested)
   </script>
 </body>
 </html>
