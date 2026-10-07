@@ -1,64 +1,102 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!doctype html>
+<html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تطبيق ANAS GDXJ</title>
-    <style>
-        /* التنسيقات العامة لتحسين المظهر والألوان */
-        body {
-            background-color: #1a1a1a; /* خلفية داكنة مريحة */
-            color: #ffffff; /* نصوص بيضاء واضحة فوق الخلفية الداكنة */
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 40px 20px;
-            margin: 0;
-        }
-        .app-card {
-            background-color: #262626;
-            max-width: 450px;
-            margin: 0 auto;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
-        h1 {
-            color: #4facfe; /* لون أزرق سماوي واضح */
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        p {
-            color: #b3b3b3; /* لون رمادي فاتح للنصوص الفرعية */
-            font-size: 15px;
-            line-height: 1.6;
-        }
-        /* تحويل رابط الـ APK التقليدي إلى زر تحميل احترافي */
-        .download-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
-            color: #fff;
-            padding: 12px 35px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 25px;
-            margin-top: 25px;
-            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
-            transition: transform 0.2s;
-        }
-        .download-btn:hover {
-            transform: scale(1.05);
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>تحميل VIP — أنس</title>
+  <style>
+    :root{--bg:#f7f8fb;--card:#fff;--accent:#0b6efd}
+    body{font-family:Tahoma, Arial, sans-serif;background:var(--bg);margin:0;padding:24px;direction:rtl}
+    .container{max-width:760px;margin:32px auto;background:var(--card);padding:24px;border-radius:8px;box-shadow:0 6px 18px rgba(11,14,28,0.06)}
+    h1{margin-top:0;color:#111}
+    p.lead{color:#333}
+    .meta{color:#666;font-size:14px;margin-bottom:16px}
+    .btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 20px;border-radius:6px;text-decoration:none;font-weight:600}
+    .btn:disabled{opacity:0.6}
+    .notes{background:#fcfcff;border-left:4px solid #e6e9ff;padding:12px;margin-top:12px;color:#333}
+    footer{margin-top:18px;color:#777;font-size:13px}
+    .pw{margin:12px 0}
+    input[type=password]{width:100%;padding:10px;border:1px solid #ddd;border-radius:6px}
+  </style>
 </head>
 <body>
+  <div class="container">
+    <h1>منطقة تحميل VIP — تطبيق أنس</h1>
+    <p class="lead">هذا هو الموقع الرسمي لتحميل النسخة الخاصة (VIP) من تطبيق أنس. يجب أن يتم التنزيل من هذه الصفحة عبر زر التحميل أدناه.</p>
 
-    <div class="app-card">
-        <h1>تم إحياء برنامج ANAS GDXJ</h1>
-        <p>برنامج حديث ومبتكر لتلبية احتياجاتك الذكية.</p>
-        
-        <!-- هنا نضع رابط تحميل ملف الـ APK المخزن في الجيتهاب -->
-        <a href="anas_gdxj.apk" class="download-btn">تحميل تطبيق APK</a>
+    <div class="meta">
+      إصدار: <strong>1.10.0</strong> · منشور: <strong>2026-10-07</strong>
     </div>
 
+    <div>
+      <p><strong>قصة التطبيق (الحكاية):</strong></p>
+      <p class="notes">تطبيق أنس يوفّر تجربة قراءة ومشاركة المحتوى بشكل بسيط وسلس. هذا الإصدار يجلب تحديثات وتحسينات عامة حسب ملاحظات الإصدار: "جديد". يستخدم التطبيق واجهات Android قياسية (Activities، ViewModel) ويتصل بخادم عن طريق ApiService. الهدف من هذه الصفحة هو توزيع ملف الـ APK بشكل محكوم على مستخدمي VIP.</p>
+    </div>
+
+    <div style="margin-top:18px">
+      <p><strong>كيفية التثبيت (Android):</strong></p>
+      <ol>
+        <li>اضغط زر "تحميل APK" لتحميل الملف.</li>
+        <li>إذا ظهرت رسالة منع التثبيت من مصادر غير معروفة، تفعيل السماح للتثبيت من المتصفح أو مدير الملفات.</li>
+        <li>افتح الملف المثبت واتبع خطوات التثبيت.</li>
+      </ol>
+    </div>
+
+    <div class="pw">
+      <label for="pw"><strong>كلمة المرور (مطلوبة للوصول):</strong></label>
+      <input id="pw" type="password" placeholder="أدخل كلمة المرور الخاصة بالـ VIP">
+    </div>
+
+    <div>
+      <a id="downloadBtn" class="btn" href="#" onclick="return false;" aria-disabled="true">تحميل APK</a>
+      <p style="margin-top:10px;color:#666;font-size:13px">ملاحظة مهمة: الرابط النهائي سيشير إلى ملف الإصدار المرفوع في صفحة Releases على GitHub. إن أردت حماية أقوى (روابط مؤقتة)، يمكنني إعداد حل خلفي عبر Firebase أو S3.</p>
+    </div>
+
+    <div style="margin-top:18px">
+      <details>
+        <summary>ملاحظات فنية قصيرة للمطور</summary>
+        <ul>
+          <li>المصدر: مستودع Android (Kotlin) في مجلد app/.</li>
+          <li>ملف الـ APK الحالي: anas_gdxj.apk (Release: anasgdxj).</li>
+          <li>للنشر على متجر Google Play استخدم AAB و signing key وليس APK فقط.</li>
+        </ul>
+      </details>
+    </div>
+
+    <footer>
+      <small>تم إعداد صفحة التحميل هذه لتبدأ التوزيع من هنا. إن رغبت أن أفعّل ميزة تسجيل الدخول أو توليد روابط مؤقتة، أخبرني لأكمل بقسم الاستضافة.</small>
+    </footer>
+  </div>
+
+  <script>
+    // رابط التنزيل المباشر الموجود في Releases
+    const APK_URL = 'https://github.com/Featuredapps/anas_gdxj.apk/releases/download/anasgdxj/anas_gdxj.apk';
+    // كلمة مرور بسيطة للتحكم المباشر (يمكن تغييرها أو استبدالها بنظام autent)
+    const VIP_PW = 'vip2026';
+
+    const btn = document.getElementById('downloadBtn');
+    document.getElementById('pw').addEventListener('input', (e) => {
+      const ok = e.target.value === VIP_PW;
+      btn.setAttribute('aria-disabled', ok ? 'false' : 'true');
+      if(ok) btn.href = APK_URL; else btn.href = '#';
+    });
+
+    btn.addEventListener('click', (e) => {
+      if(btn.getAttribute('aria-disabled') === 'true'){
+        alert('أدخل كلمة المرور الصحيحة للوصول إلى رابط التحميل');
+        return false;
+      }
+      // بدأ التحميل — نفتح الرابط في نافذة جديدة لضمان عمل التنزيل
+      window.open(APK_URL, '_blank');
+
+      // محلي: زيادة عداد تنزيل مؤقت في localStorage لأغراض داخل المتصفح
+      try{
+        const key = 'anas_download_count';
+        const n = parseInt(localStorage.getItem(key) || '0', 10) + 1;
+        localStorage.setItem(key, n.toString());
+      }catch(err){/* ignore */}
+      return false;
+    });
+  </script>
 </body>
 </html>
