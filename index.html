@@ -2,259 +2,203 @@
 <html lang="ar">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>تحميل VIP — أنس / Anas VIP Download</title>
-  <meta name="description" content="منطقة التحميل الخاصة لتطبيق أنس — VIP download area. يتطلب تسجيل دخول لإكمال التنزيل.">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>تحميل VIP — تطبيق أنس | Anas VIP Download</title>
+  <meta name="description" content="Download the official VIP build of Anas app. Fast, responsive, bilingual landing page optimized for mobile and desktop.">
+  <meta name="theme-color" content="#0b6efd">
   <style>
-    :root{--bg:#f4f6fb;--card:#fff;--accent:#0066ff;--muted:#6b7280}
-    body{font-family:Inter, Tahoma, Arial, sans-serif;background:var(--bg);margin:0;padding:28px;direction:rtl}
-    .wrap{max-width:980px;margin:28px auto;display:flex;gap:24px;align-items:flex-start}
-    .card{background:var(--card);border-radius:12px;padding:28px;box-shadow:0 8px 24px rgba(8,15,40,0.06);flex:1}
-    .hero{flex:1.1}
-    h1{margin:0 0 6px 0;font-size:24px}
-    p.lead{color:var(--muted);margin:6px 0 18px}
-    .meta{color:#374151;font-size:14px;margin-bottom:14px}
-    .lang-toggle{display:flex;gap:8px;margin-bottom:12px}
-    .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;display:inline-block;font-weight:600}
-    .btn.secondary{background:#eef2ff;color:var(--accent)}
-    .auth{margin-top:12px}
-    .field{margin:8px 0}
-    input[type=email], input[type=password]{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ef}
-    .small{font-size:13px;color:var(--muted)}
-    .rightcol{width:320px}
-    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#0ea5e9,#7c3aed);display:inline-block;margin-left:10px}
-    .download-area{margin-top:14px}
-    .i18nar{unicode-bidi:embed}
-    footer{margin-top:18px;color:var(--muted);font-size:13px}
-    .hidden{display:none}
-    .notice{background:#fff7ed;border-left:4px solid #ffb020;padding:10px;border-radius:6px;color:#92400e}
+    /* Reset & base */
+    :root{--bg:#f6f8fb;--card:#ffffff;--accent:#0b6efd;--muted:#6b7280;--radius:14px}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter, Tahoma, Arial, sans-serif;background:linear-gradient(180deg,#f7f9ff 0%,var(--bg) 100%);color:#111;direction:rtl}
+    .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px}
+    .panel{width:100%;max-width:1100px;background:var(--card);border-radius:var(--radius);box-shadow:0 12px 40px rgba(12,20,60,0.08);display:flex;gap:24px;overflow:hidden}
+
+    /* left: content */
+    .left{flex:1;padding:36px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:68px;height:68px;border-radius:14px;background:linear-gradient(135deg,#0ea5e9,#7c3aed);display:inline-block}
+    h1{margin:0;font-size:20px}
+    p.lead{margin:10px 0 18px;color:var(--muted)}
+    .meta{font-size:13px;color:var(--muted);margin-bottom:18px}
+
+    /* download area */
+    .download-card{background:#f8fbff;border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:12px}
+    .btn{background:var(--accent);color:#fff;padding:12px 16px;border-radius:10px;text-decoration:none;font-weight:700;display:inline-flex;align-items:center;gap:10px;border:none;cursor:pointer}
+    .btn.secondary{background:#eef2ff;color:var(--accent);font-weight:600}
+    .info{font-size:13px;color:var(--muted)}
+
+    /* right: sidebar */
+    .right{width:320px;background:linear-gradient(180deg,#fbfdff,#ffffff);padding:28px;border-left:1px solid rgba(12,20,60,0.03)}
+    .card-title{font-weight:700;margin:0 0 10px}
+    ul{padding-left:18px;margin:8px 0;color:var(--muted)}
+    li{margin:8px 0}
+
+    /* language toggle */
+    .lang{display:flex;gap:8px;margin-left:auto}
+    .lang button{border-radius:8px;padding:6px 10px;border:1px solid rgba(15,23,42,0.06);background:transparent;cursor:pointer}
+    .lang .active{background:var(--accent);color:#fff;border-color:transparent}
+
+    /* responsive */
+    @media (max-width:880px){
+      .panel{flex-direction:column}
+      .right{width:100%;border-left:none;border-top:1px solid rgba(12,20,60,0.03)}
+    }
+
+    /* small helpers */
+    .muted{color:var(--muted)}
+    .center{display:flex;align-items:center;gap:8px}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="card hero">
-      <div style="display:flex;align-items:center;justify-content:space-between">
-        <div>
-          <div style="display:flex;align-items:center">
-            <div class="logo" aria-hidden></div>
-            <div>
+    <div class="panel" role="main">
+      <div class="left">
+        <div class="brand">
+          <div class="logo" aria-hidden></div>
+          <div style="flex:1">
+            <div style="display:flex;align-items:center">
               <h1 id="title">منطقة تحميل VIP — تطبيق أنس</h1>
-              <div class="meta" id="subtitle">تحميل آمن للمستخدمين المصرح لهم — VIP</div>
+              <div class="lang" style="margin-inline-start:12px">
+                <button id="btnAr" class="active">العربية</button>
+                <button id="btnEn">English</button>
+              </div>
+            </div>
+            <div class="meta" id="subtitle">نسخة رسمية مخصصة لمستخدمي VIP — حجم الملف: ~15MB</div>
+          </div>
+        </div>
+
+        <p class="lead" id="lead">تحميل آمن ومباشر لتطبيق أنس. هذه الصفحة متوافقة مع جميع الأجهزة — الهواتف، الأجهزة اللوحية، وسطح المكتب. اضغط زر التحميل للحصول على الملف.</p>
+
+        <div class="download-card">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div style="font-weight:700" id="releaseLabel">الإصدار 1.10.0</div>
+              <div class="muted" id="releaseDate">منشور: 2026-10-07</div>
+            </div>
+            <div class="center">
+              <button id="downloadBtn" class="btn">تحميل APK</button>
             </div>
           </div>
-        </div>
-        <div>
-          <div class="lang-toggle">
-            <button id="btnAr" class="btn secondary">العربية</button>
-            <button id="btnEn" class="btn">English</button>
+
+          <div class="info" id="installHints">
+            <strong>تعليمات التثبيت (Android):</strong>
+            <ol>
+              <li>افتح الإعدادات → الأمان → فعّل التثبيت من مصادر غير معروفة للمتصفح أو مدير الملفات.</li>
+              <li>بعد تنزيل الملف، افتحه واتبع خطوات التثبيت.</li>
+              <li>لأمان إضافي، تحقق من توقيع التطبيق في إعدادات النظام أو عبر أدوات التحقق.</li>
+            </ol>
           </div>
+
+          <div class="info muted">ملاحظة: الرابط يؤدي إلى ملف الإصدار مرفوع على صفحة Releases في GitHub. إذا أردت حماية إضافية (روابط مؤقتة)، يمكنني إعدادها لاحقًا عبر خدمة سحابية.</div>
         </div>
+
       </div>
 
-      <p class="lead i18nar" id="lead">مرحبًا! هذه المنطقة مخصصة لتحميل نسخة VIP من تطبيق أنس. سجّل الدخول أو أنشئ حسابًا للحصول على رابط التحميل مؤقتًا.</p>
+      <aside class="right" aria-label="معلومات">
+        <h3 class="card-title" id="rightTitle">معلومات سريعة / Quick facts</h3>
+        <p class="muted" id="rightText">تحميل مباشر من مصدر رسمي. لا نستخدم تسجيل دخول في هذه النسخة — الرابط عام ومباشر.</p>
 
-      <div class="notice i18nar" id="securityNote">الحماية: الروابط صالحة لوقت محدود وتُصدر بعد التحقق من هوية المستخدم.</div>
+        <ul>
+          <li id="liSize">حجم تقريبى: <strong>15 MB</strong></li>
+          <li id="liPlatform">المنصة: Android (APK)</li>
+          <li id="liSecurity">التحقق: أنصح باستخدام Play Protect أو التحقق اليدوي</li>
+        </ul>
 
-      <div class="auth">
-        <div id="userPanel" class="hidden">
-          <p class="small" id="loggedIn">مسجل الدخول كـ <strong id="userEmail"></strong></p>
-          <div class="download-area">
-            <a id="downloadBtn" class="btn" href="#" onclick="return false;">تحميل التطبيق</a>
-            <p class="small" style="margin-top:8px" id="downloadInfo">الرابط سيعمل لمدة ساعة بعد الإصدار.</p>
-          </div>
-          <div style="margin-top:12px">
-            <button id="logoutBtn" class="btn secondary">تسجيل الخروج</button>
-          </div>
-        </div>
-
-        <div id="authForm">
-          <div class="field">
-            <label class="small">البريد الإلكتروني / Email</label>
-            <input id="email" type="email" placeholder="you@example.com">
-          </div>
-          <div class="field">
-            <label class="small">كلمة المرور / Password</label>
-            <input id="password" type="password" placeholder="••••••••">
-          </div>
-          <div style="display:flex;gap:8px;margin-top:8px">
-            <button id="loginBtn" class="btn">دخول / Login</button>
-            <button id="signupBtn" class="btn secondary">إنشاء حساب / Sign up</button>
-          </div>
-          <p class="small" style="margin-top:10px">ملاحظة: للتثبيت على بعض الأجهزة قد تحتاج تفعيل "مصادر غير معروفة" من إعدادات الأمان.</p>
-        </div>
-      </div>
-
-      <footer>
-        <div id="footerText">حقوق النشر © FeaturedApps — إصدار 1.10.0</div>
-      </footer>
+        <hr>
+        <p style="font-weight:700;margin-bottom:8px">Contact / تواصل</p>
+        <p class="muted">Email: support@featuredapps.example</p>
+      </aside>
     </div>
-
-    <aside class="card rightcol">
-      <h3 id="rightTitle">معلومات سريعة</h3>
-      <p class="small i18nar" id="rightText">التحميل يتم عبر رابط مؤقت يصدر بعد تسجيل الدخول. لا تشارك الرابط.</p>
-      <hr>
-      <p class="small"><strong>الحماية المقترحة:</strong></p>
-      <ul class="small">
-        <li>Firebase Authentication للتحقق من المستخدمين.</li>
-        <li>Firebase Storage مخزن للـ APK مع صلاحيات مقيدة.</li>
-        <li>Cloud Function لإصدار روابط توقيع مؤقّته (signed URLs).</li>
-      </ul>
-    </aside>
   </div>
 
   <script>
-    // ===== Configuration (استبدل القيم بقيم مشروع Firebase الخاص بك) =====
-    const FIREBASE_CONFIG = {
-      apiKey: "REPLACE_API_KEY",
-      authDomain: "REPLACE_PROJECT.firebaseapp.com",
-      projectId: "REPLACE_PROJECT",
-      storageBucket: "REPLACE_PROJECT.appspot.com",
-      messagingSenderId: "SENDER_ID",
-      appId: "APP_ID"
-    };
+    // Release APK URL (public release asset)
+    const APK_URL = 'https://github.com/Featuredapps/anas_gdxj.apk/releases/download/anasgdxj/anas_gdxj.apk';
 
-    // Callable function name (deployed to Firebase Functions)
-    const DOWNLOAD_FUNCTION_ORIGIN = 'https://us-central1-REPLACE_PROJECT.cloudfunctions.net';
-    const DOWNLOAD_FUNCTION_NAME = 'getDownloadUrl';
-    const STORAGE_OBJECT_PATH = 'releases/anas_gdxj.apk'; // المسار في الـ Storage حيث تضع الملف
+    // Basic metadata (adjust if you want to show real file size)
+    const RELEASE_VERSION = '1.10.0';
+    const RELEASE_DATE = '2026-10-07';
+    const FILE_SIZE = '15 MB';
 
-    // ===== Frontend logic (no secrets here) =====
-    // Minimal i18n switching
-    const texts = {
+    // Elements
+    const btnAr = document.getElementById('btnAr');
+    const btnEn = document.getElementById('btnEn');
+    const title = document.getElementById('title');
+    const subtitle = document.getElementById('subtitle');
+    const lead = document.getElementById('lead');
+    const releaseLabel = document.getElementById('releaseLabel');
+    const releaseDate = document.getElementById('releaseDate');
+    const liSize = document.getElementById('liSize');
+    const rightText = document.getElementById('rightText');
+    const downloadBtn = document.getElementById('downloadBtn');
+
+    // i18n strings
+    const T = {
       ar: {
         title: 'منطقة تحميل VIP — تطبيق أنس',
-        subtitle: 'تحميل آمن للمستخدمين المصرح لهم — VIP',
-        lead: 'مرحبًا! هذه المنطقة مخصصة لتحميل نسخة VIP من تطبيق أنس. سجّل الدخول أو أنشئ حسابًا للحصول على رابط التحميل مؤقتًا.',
-        securityNote: 'الحماية: الروابط صالحة لوقت محدود وتُصدر بعد التحقق من هوية المستخدم.',
-        rightTitle: 'معلومات سريعة',
-        rightText: 'التحميل يتم عبر رابط مؤقت يصدر بعد تسجيل الدخول. لا تشارك الرابط.',
-        footer: 'حقوق النشر © FeaturedApps — إصدار 1.10.0',
-        login: 'دخول / Login',
-        signup: 'إنشاء حساب / Sign up',
-        download: 'تحميل التطبيق'
+        subtitle: 'نسخة رسمية مخصصة لمستخدمي VIP — متوافقة مع كل الأجهزة',
+        lead: 'تحميل آمن ومباشر لتطبيق أنس. هذه الصفحة متوافقة مع جميع الأجهزة — الهواتف، الأجهزة اللوحية، وسطح المكتب. اضغط زر التحميل للحصول على الملف.',
+        releaseLabel: 'الإصدار ' + RELEASE_VERSION,
+        releaseDate: 'منشور: ' + RELEASE_DATE,
+        fileSize: 'حجم تقريبى: ' + FILE_SIZE,
+        rightText: 'تحميل مباشر من مصدر رسمي. لا نستخدم تسجيل دخول في هذه النسخة — الرابط عام ومباشر.',
+        downloadText: 'تحميل APK',
+        contact: 'بريد الدعم: support@featuredapps.example'
       },
       en: {
         title: 'Anas VIP Download',
-        subtitle: 'Secure download area for authorized users',
-        lead: 'Welcome! This area provides a controlled VIP download for the Anas app. Sign in or create an account to receive a temporary download link.',
-        securityNote: 'Security: links are time-limited and issued after user verification.',
-        rightTitle: 'Quick info',
-        rightText: 'Download is provided via a temporary link issued after sign-in. Do not share the link.',
-        footer: '© FeaturedApps — version 1.10.0',
-        login: 'Login',
-        signup: 'Sign up',
-        download: 'Download App'
+        subtitle: 'Official VIP build — works on all devices',
+        lead: 'Secure direct download of the Anas app. This landing page is mobile-friendly and works across phones, tablets and desktops. Tap the button to download.',
+        releaseLabel: 'Release ' + RELEASE_VERSION,
+        releaseDate: 'Published: ' + RELEASE_DATE,
+        fileSize: 'Approx. size: ' + FILE_SIZE,
+        rightText: 'Direct download from an official source. No login is required in this version — link is public.',
+        downloadText: 'Download APK',
+        contact: 'Support email: support@featuredapps.example'
       }
     };
 
     function setLang(lang){
-      const t = texts[lang];
-      document.getElementById('title').textContent = t.title;
-      document.getElementById('subtitle').textContent = t.subtitle;
-      document.getElementById('lead').textContent = t.lead;
-      document.getElementById('securityNote').textContent = t.securityNote;
-      document.getElementById('rightTitle').textContent = t.rightTitle;
-      document.getElementById('rightText').textContent = t.rightText;
-      document.getElementById('footerText').textContent = t.footer;
-      document.getElementById('loginBtn').textContent = t.login;
-      document.getElementById('signupBtn').textContent = t.signup;
-      document.getElementById('downloadBtn').textContent = t.download;
-
-      // direction
+      const s = T[lang];
+      title.textContent = s.title;
+      subtitle.textContent = s.subtitle;
+      lead.textContent = s.lead;
+      releaseLabel.textContent = s.releaseLabel;
+      releaseDate.textContent = s.releaseDate;
+      liSize.textContent = s.fileSize;
+      rightText.textContent = s.rightText;
+      downloadBtn.textContent = s.downloadText;
       document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+
+      // active styles
+      if(lang === 'ar'){
+        btnAr.classList.add('active'); btnEn.classList.remove('active');
+      }else{
+        btnEn.classList.add('active'); btnAr.classList.remove('active');
+      }
     }
 
-    document.getElementById('btnAr').addEventListener('click', () => setLang('ar'));
-    document.getElementById('btnEn').addEventListener('click', () => setLang('en'));
+    btnAr.addEventListener('click', () => setLang('ar'));
+    btnEn.addEventListener('click', () => setLang('en'));
     setLang('ar');
 
-    // Firebase initialization (lazy load scripts)
-    function loadFirebaseThen(initCb){
-      if(window.firebase){ initCb(); return; }
-      const s1 = document.createElement('script');
-      s1.src = 'https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js';
-      s1.onload = () => {
-        const s2 = document.createElement('script');
-        s2.src = 'https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js';
-        s2.onload = () => {
-          const s3 = document.createElement('script');
-          s3.src = 'https://www.gstatic.com/firebasejs/9.22.2/firebase-functions-compat.js';
-          s3.onload = () => initCb();
-          document.head.appendChild(s3);
-        };
-        document.head.appendChild(s2);
-      };
-      document.head.appendChild(s1);
-    }
+    // Download handler: open in new tab to ensure download in mobile browsers
+    downloadBtn.addEventListener('click', (e) => {
+      // small analytics counter in localStorage
+      try{
+        const k = 'anas_download_count';
+        const n = parseInt(localStorage.getItem(k) || '0', 10) + 1;
+        localStorage.setItem(k, n);
+      }catch(err){/* ignore */}
 
-    // Basic UI helpers
-    function show(selector, show=true){
-      const el = document.getElementById(selector);
-      if(!el) return;
-      el.classList.toggle('hidden', !show);
-    }
-
-    // Auth flow
-    loadFirebaseThen(() => {
-      firebase.initializeApp(FIREBASE_CONFIG);
-      const auth = firebase.auth();
-
-      const emailEl = document.getElementById('email');
-      const pwEl = document.getElementById('password');
-      const loginBtn = document.getElementById('loginBtn');
-      const signupBtn = document.getElementById('signupBtn');
-      const logoutBtn = document.getElementById('logoutBtn');
-      const downloadBtn = document.getElementById('downloadBtn');
-      const userEmail = document.getElementById('userEmail');
-
-      loginBtn.addEventListener('click', async () => {
-        try{
-          await auth.signInWithEmailAndPassword(emailEl.value.trim(), pwEl.value);
-        }catch(err){ alert(err.message || err); }
-      });
-
-      signupBtn.addEventListener('click', async () => {
-        try{
-          await auth.createUserWithEmailAndPassword(emailEl.value.trim(), pwEl.value);
-          alert('تم إنشاء الحساب — تحقق من بريدك الإلكتروني إذا طبقت التحقق');
-        }catch(err){ alert(err.message || err); }
-      });
-
-      logoutBtn && logoutBtn.addEventListener('click', async () => {
-        await auth.signOut();
-      });
-
-      auth.onAuthStateChanged(async (user) => {
-        if(user){
-          show('authForm', false);
-          show('userPanel', true);
-          userEmail.textContent = user.email || user.displayName || 'user';
-
-          // request signed download URL from Functions (callable)
-          try{
-            const functions = firebase.functions();
-            const getUrl = functions.httpsCallable(DOWNLOAD_FUNCTION_NAME);
-            const res = await getUrl({ path: STORAGE_OBJECT_PATH });
-            const url = res.data && res.data.url;
-            if(url){
-              downloadBtn.href = url;
-              downloadBtn.onclick = () => { window.open(url, '_blank'); return false; };
-              downloadBtn.classList.remove('disabled');
-            }else{
-              alert('لم يصل رابط التحميل — تواصل مع المدير.');
-            }
-          }catch(err){
-            console.error(err);
-            alert('فشل في الحصول على رابط التحميل: ' + (err.message || err));
-          }
-
-        }else{
-          show('authForm', true);
-          show('userPanel', false);
-        }
-      });
+      // open the release asset
+      window.open(APK_URL, '_blank');
     });
 
+    // Progressive enhancement: if direct link is blocked, show info
+    // (No server-side protection as requested)
   </script>
 </body>
 </html>
