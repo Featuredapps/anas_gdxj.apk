@@ -2,4 +2,7 @@
     <string name="app_name">ANAS GDXJ</string>
     <string name="app_title">تم إحياء برنامج ANAS GDXJ</string>
     <string name="app_subtitle">برنامج حديث ومبتكر لتلبية احتياجاتك الذكية.</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="username">اسم المستخدم</string>
+    <string name="logout">خروج</string>
 </resources>
